@@ -1,0 +1,282 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --primary-color: #682cc0;
+  --margin-left-right: 4vw;
+  --text-color: #dad9d9;
+  --secondary-color: #3bbeed;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* .......... utility class ...............  */
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+/* ................. Header  .....................  */
+
+header {
+  background: var(--primary-color);
+  color: var(--text-color);
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+/* ....navbar.....  */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2vw 0;
+}
+
+.logo {
+  width: 90px;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+}
+.list {
+  margin-left: 3vw;
+}
+
+.btn {
+  margin-left: 4vw;
+  font-size: 0.8rem;
+  padding: 1vw 2vw;
+  background-color: var(--secondary-color);
+}
+
+.menu {
+  display: none;
+}
+
+/* ....... header-banner .........  */
+
+.header-banner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.h-left {
+  padding: 4vw;
+}
+
+.h-left h2 {
+  font-size: 2rem;
+}
+
+.h-left p {
+  font-size: 0.6rem;
+}
+
+.h-right img {
+  width: 100%;
+}
+
+/* ....................... details .....................  */
+
+.detail {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr;
+  margin-top: 3vw;
+}
+
+.d-left img {
+  width: 90%;
+}
+.d-right {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  justify-content: center;
+}
+.d-right h3 {
+  font-size: 1.5rem;
+  margin-bottom: 2vw;
+}
+
+.d-right-list ul li img {
+  width: 30px;
+}
+.d-right-list ul li h4 {
+  display: inline-block;
+  margin-bottom: 1vw;
+
+  font-weight: 700;
+}
+.d-right-list ul li p {
+  font-size: 0.6rem;
+  margin-left: 2.2vw;
+  margin-bottom: 1vw;
+}
+
+/* ................ Features ...................  */
+.features {
+  width: 70%;
+  margin: auto;
+  margin-top: 1vw;
+  margin-bottom: 3vw;
+}
+.features h3 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 3vw;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2vw;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 30px;
+
+  box-shadow: 2px 2px 2px rgba(78, 77, 77, 0.5);
+}
+.active {
+  background: var(--secondary-color);
+  color: white;
+  font-weight: 200;
+  border-radius: 30px;
+}
+
+.img {
+  margin-top: 2vw;
+  width: 100px;
+  height: 100px;
+  background-color: rgba(135, 34, 230, 0.585);
+  border-radius: 50px;
+}
+.img img {
+  display: inline-block;
+  margin: auto;
+
+  width: 50px;
+  margin-top: 2vw;
+}
+.b-card {
+  margin-top: 1vw;
+  padding: 2vw;
+}
+.b-card P {
+  font-size: 0.6rem;
+}
+
+/* /////////////// Media  /////////////////// */
+
+@media screen and (max-width: 700px) {
+  .nav-list {
+    display: none;
+  }
+  .menu {
+    display: block;
+  }
+  header {
+    border-radius: 0;
+  }
+  .detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 3vw;
+  }
+
+  .d-left img {
+    width: 100%;
+  }
+  .d-right {
+    width: 90%;
+  }
+
+  .features {
+    width: 50%;
+    margin: auto;
+    margin-top: 1vw;
+    margin-bottom: 3vw;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2vw;
+  }
+}
+@media screen and (max-width: 500px) {
+  .container {
+    width: 100%;
+    margin: 0 2vw;
+  }
+  header {
+    border-radius: 0;
+  }
+
+  .header-banner {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .h-left {
+    order: 2;
+  }
+
+  .detail {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 3vw;
+  }
+
+  .d-left img {
+    width: 100%;
+  }
+  .d-right {
+    width: 80%;
+    margin: auto;
+  }
+
+  .features {
+    width: 60%;
+    margin: auto;
+    margin-top: 1vw;
+    margin-bottom: 3vw;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4vw;
+  }
+  /* .card {
+        padding: 2vw;
+      
+    } */
+
+  .img {
+    padding: 2vw;
+  }
+  .b-card P {
+    font-size: 0.6rem;
+    margin-bottom: 1vw;
+  }
+}
